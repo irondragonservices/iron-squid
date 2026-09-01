@@ -67,6 +67,10 @@ when the package set has actually changed, and it signs what it pushes.
 
 ## Changes from upstream
 
+- **Packages are patched before the libraries are lifted out.** Whatever ships
+  in the upstream image is what got copied, and upstream rebuilds on its own
+  schedule rather than the security team's, so the hardened image inherited
+  every unpatched library the upstream tag happened to carry.
 - **The upstream image could not build.** Its last instruction was
   `COPY docker/squid.conf /etc/squid/squid.conf`, and `docker/squid.conf` was
   never committed. The repository contained a Dockerfile, a LICENSE and a
