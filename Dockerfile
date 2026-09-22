@@ -5,7 +5,7 @@
 # result out. It also referenced docker/squid.conf, which was never committed,
 # so the image could not build at all. The packaged binary is the same build
 # from the same maintainers, without the toolchain.
-FROM debian:13.6-slim@sha256:d7e12182ce18b85b93007c1dedf31f2d29e01ccf3182cc4017c709b6259bc132 AS build
+FROM debian:13.7-slim@sha256:a99cfc517144bc59b1978475ec53b46ecabec7e43635402ee5b77cc54cd1b20a AS build
 
 # The version the image publishes under. Pinned, so an upgrade is a commit
 # rather than something that happens on the next rebuild.
