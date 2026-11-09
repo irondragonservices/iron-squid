@@ -60,7 +60,7 @@ RUN mkdir -p /out/usr/sbin /out/tmp \
 # Distroless, matched to the Debian release squid was packaged for. squid is
 # copied out dynamically linked, so a mismatched glibc is a container that
 # exits before it logs anything.
-FROM gcr.io/distroless/base-debian13:nonroot@sha256:9039a88709bcc2bacf5a2faac331d65dd6840f763f225ad9594cc0c67bcd0fba
+FROM gcr.io/distroless/base-debian13:nonroot@sha256:7fe4df6a4413adf5889960d345a28b4574aea0872ea47684c7244c8d88027dca
 
 LABEL org.opencontainers.image.source="https://github.com/irondragonservices/iron-squid"
 LABEL org.opencontainers.image.description="Hardened base image for running Squid"
